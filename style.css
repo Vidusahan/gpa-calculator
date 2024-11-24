@@ -1,7 +1,7 @@
 /* Enhanced styles.css */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #2c3e50, #34495e);
+    background: linear-gradient(to right, #17202a, #375068);
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.8);;
+    background: rgba(4, 21, 35, 0.8);;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -35,14 +35,6 @@ form {
     flex-direction: column;
     align-items: center;
 }
-
-/* .course {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 15px;
-    width: 100%;
-  } */
 
 .course {
     display: contents;
@@ -74,6 +66,11 @@ select:focus {
     box-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
 }
 
+select option {
+    background-color: #34495e; /* Dropdown item background */
+    color: #ecf0f1; /* Dropdown item text color */
+}
+
 button {
     padding: 12px 20px;
     margin: 10px 5px;
@@ -85,6 +82,7 @@ button {
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    width: 60%;
 }
 
 button:hover {
@@ -108,26 +106,13 @@ button[type="reset"]:hover {
     box-shadow: 0 8px 15px rgba(255, 62, 62, 0.3);
 }
 
-#addCourse {
+#calculateGPA {
     background: linear-gradient(90deg, #28a745, #5edc82);
 }
 
-#addCourse:hover {
+#calculateGPA:hover {
     box-shadow: 0 8px 15px rgba(40, 167, 69, 0.3);
 }
-
-/* Scrollable Course List */
-/* #courseContainer {
-    max-height: 300px;
-    overflow-y: auto;
-    margin-bottom: 15px;
-  } */
-
-/* #courseContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-  } */
 
 /* Scrollable Container */
 #courseContainer {
@@ -140,17 +125,18 @@ button[type="reset"]:hover {
     /* Fixed column widths */
     gap: 10px;
     /* Space between rows */
+    padding-bottom: 15px;
 }
 
 .course:nth-child(odd) {
     background: rgba(0, 123, 255, 0.05);
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(0, 123, 255, 0.05);
+    background-color: rgba(32, 137, 249, 0.056);
 }
 
 .course:nth-child(even) {
-    background-color: rgba(240, 240, 240, 0.8); /* Light gray for even rows */
+    background-color: rgba(32, 137, 249, 0.056); /* Light gray for even rows */
   }
 
   /* General Responsive Adjustments */
@@ -184,6 +170,8 @@ button[type="reset"]:hover {
         flex-direction: column; /* Stack items vertically */
         gap: 10px; /* Maintain spacing */
         overflow-y: auto;
+        width: 350px;
+        padding-bottom: 10px;
     }
 
     .course {
@@ -202,7 +190,7 @@ button[type="reset"]:hover {
     }
 
     button {
-        width: 100%; /* Buttons stretch to full width */
+        width: 50%; /* Buttons stretch to full width */
         font-size: 0.9rem; /* Adjust font size */
         padding: 10px; /* Reduce padding */
     }
@@ -228,7 +216,7 @@ button[type="reset"]:hover {
 
     #courseContainer {
         max-height: 200px;
-        max-width: 300px;
+        max-width: 250px;
     }
 
     .container {
@@ -244,6 +232,7 @@ button[type="reset"]:hover {
     button {
         font-size: 0.8rem; /* Smaller button text */
         padding: 8px 10px; /* Smaller padding */
+        width: 60%;
     }
 
     #result {

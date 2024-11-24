@@ -43,4 +43,8 @@ document.getElementById('addCourse').addEventListener('click', function () {
     const gpa = (weightedGrade / totalCredits) || 0;
     document.getElementById('result').textContent = `Your GPA is: ${gpa.toFixed(2)}`;
   });
+
+  document.querySelector('button[type="reset"]').addEventListener('click', function () {
+    document.getElementById('result').textContent = `Your GPA is: 0.00`;
+});
   
