@@ -1,0 +1,252 @@
+/* Enhanced styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #ecf0f1;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 750px;
+    text-align: center;
+    border: 2px solid #00f2fe;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00f2fe;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .course {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+  } */
+
+.course {
+    display: contents;
+    grid-template-columns: 2fr 1fr 1fr;
+    /* Adjust column widths */
+    gap: 15px;
+    /* Space between columns */
+    align-items: center;
+    /* Vertically align inputs */
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: 0.3s;
+    color: #ecf0f1;
+    background: linear-gradient(to right, #34495e, #678eb6);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #00f2fe;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4caf50;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+button[type="reset"] {
+    background: linear-gradient(90deg, #ff3e3e, #ff6666);
+}
+
+button[type="reset"]:hover {
+    box-shadow: 0 8px 15px rgba(255, 62, 62, 0.3);
+}
+
+#addCourse {
+    background: linear-gradient(90deg, #28a745, #5edc82);
+}
+
+#addCourse:hover {
+    box-shadow: 0 8px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Scrollable Course List */
+/* #courseContainer {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+  } */
+
+/* #courseContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  } */
+
+/* Scrollable Container */
+#courseContainer {
+    max-height: 300px;
+    /* Set a fixed height for scrolling */
+    overflow-y: auto;
+    display: grid;
+    /* Use grid for uniform alignment */
+    grid-template-columns: 2fr 1fr 1fr;
+    /* Fixed column widths */
+    gap: 10px;
+    /* Space between rows */
+}
+
+.course:nth-child(odd) {
+    background: rgba(0, 123, 255, 0.05);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.course:nth-child(even) {
+    background-color: rgba(240, 240, 240, 0.8); /* Light gray for even rows */
+  }
+
+  /* General Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Body adjustments for smaller screens */
+    body {
+        font-size: 0.9rem;
+    }
+
+    button:hover {
+        transform: none; /* Disable hover transform on smaller screens */
+    }
+
+    .container {
+        padding: 20px;
+        width: 95%;
+        max-width: 500px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #courseContainer {
+        max-height: 250px; /* Adjust height for smaller screens */
+        display: flex; /* Switch to flex for better stacking */
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Maintain spacing */
+        overflow-y: auto;
+    }
+
+    .course {
+        display: flex; /* Switch to flex for better stacking */
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Space between inputs */
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    input,
+    select {
+        font-size: 0.9rem; /* Adjust input size */
+        padding: 8px; /* Reduce padding for smaller fields */
+    }
+
+    button {
+        width: 100%; /* Buttons stretch to full width */
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 10px; /* Reduce padding */
+    }
+
+    #result {
+        font-size: 1.2rem; /* Adjust result size */
+    }
+
+    #addCourse {
+        margin-bottom: 10px; /* Add spacing between buttons */
+    }
+
+    #calculateGPA {
+        margin-bottom: 10px; /* Add spacing between buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further tweaks for very small screens */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #courseContainer {
+        max-height: 200px;
+        max-width: 300px;
+    }
+
+    .container {
+        padding: 15px;
+        width: 80%;
+        margin: 10px;
+    }
+
+    .course {
+        padding: 8px; /* Compact padding for courses */
+    }
+
+    button {
+        font-size: 0.8rem; /* Smaller button text */
+        padding: 8px 10px; /* Smaller padding */
+    }
+
+    #result {
+        font-size: 1rem;
+    }
+}
