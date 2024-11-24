@@ -120,7 +120,7 @@ button[type="reset"]:hover {
     overflow-y: auto; /* Ensure scrollbar appears when content overflows */
     display: grid;
     grid-template-columns: 2fr 1fr 1fr; /* Use flex for stacking courses */
-    flex-direction: column; /* Stack items vertically */
+ /* Stack items vertically */
     gap: 10px; /* Space between rows */
     padding-bottom: 15px;
     scrollbar-width: thin; /* For Firefox: thin scrollbar */
