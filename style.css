@@ -114,18 +114,30 @@ button[type="reset"]:hover {
     box-shadow: 0 8px 15px rgba(40, 167, 69, 0.3);
 }
 
-/* Scrollable Container */
 #courseContainer {
-    max-height: 300px;
-    /* Set a fixed height for scrolling */
-    overflow-y: auto;
-    display: grid;
-    /* Use grid for uniform alignment */
-    grid-template-columns: 2fr 1fr 1fr;
-    /* Fixed column widths */
-    gap: 10px;
-    /* Space between rows */
+    max-height: 300px; /* Set a fixed height for scrolling */
+    overflow-y: auto; /* Ensure scrollbar appears when content overflows */
+    display: flex;
+    grid-template-columns: 2fr 1fr 1fr; /* Use flex for stacking courses */
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between rows */
     padding-bottom: 15px;
+    scrollbar-width: thin; /* For Firefox: thin scrollbar */
+    scrollbar-color: #00f2fe #34495e; /* Custom scrollbar colors for Firefox */
+}
+
+/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, etc.) */
+#courseContainer::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+}
+
+#courseContainer::-webkit-scrollbar-thumb {
+    background: #00f2fe; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded edges for the thumb */
+}
+
+#courseContainer::-webkit-scrollbar-track {
+    background: #34495e; /* Background color of the scrollbar track */
 }
 
 .course:nth-child(odd) {
