@@ -114,10 +114,11 @@ button[type="reset"]:hover {
     box-shadow: 0 8px 15px rgba(40, 167, 69, 0.3);
 }
 
+
 #courseContainer {
     max-height: 300px; /* Set a fixed height for scrolling */
     overflow-y: auto; /* Ensure scrollbar appears when content overflows */
-    display: flex;
+    display: grid;
     grid-template-columns: 2fr 1fr 1fr; /* Use flex for stacking courses */
     flex-direction: column; /* Stack items vertically */
     gap: 10px; /* Space between rows */
