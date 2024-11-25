@@ -1,4 +1,3 @@
-/* Enhanced styles.css */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #17202a, #375068);
@@ -39,11 +38,8 @@ form {
 .course {
     display: contents;
     grid-template-columns: 2fr 1fr 1fr;
-    /* Adjust column widths */
     gap: 15px;
-    /* Space between columns */
     align-items: center;
-    /* Vertically align inputs */
 }
 
 input,
@@ -67,8 +63,8 @@ select:focus {
 }
 
 select option {
-    background-color: #34495e; /* Dropdown item background */
-    color: #ecf0f1; /* Dropdown item text color */
+    background-color: #34495e; 
+    color: #ecf0f1; 
 }
 
 button {
@@ -116,29 +112,27 @@ button[type="reset"]:hover {
 
 
 #courseContainer {
-    max-height: 300px; /* Set a fixed height for scrolling */
-    overflow-y: auto; /* Ensure scrollbar appears when content overflows */
+    max-height: 300px; 
+    overflow-y: auto; 
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr; /* Use flex for stacking courses */
- /* Stack items vertically */
-    gap: 10px; /* Space between rows */
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 10px; 
     padding-bottom: 15px;
-    scrollbar-width: thin; /* For Firefox: thin scrollbar */
-    scrollbar-color: #00f2fe #34495e; /* Custom scrollbar colors for Firefox */
+    scrollbar-width: thin; 
+    scrollbar-color: #00f2fe #34495e; 
 }
 
-/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, etc.) */
 #courseContainer::-webkit-scrollbar {
-    width: 8px; /* Scrollbar width */
+    width: 8px; 
 }
 
 #courseContainer::-webkit-scrollbar-thumb {
-    background: #00f2fe; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded edges for the thumb */
+    background: #00f2fe; 
+    border-radius: 10px;
 }
 
 #courseContainer::-webkit-scrollbar-track {
-    background: #34495e; /* Background color of the scrollbar track */
+    background: #34495e; 
 }
 
 .course:nth-child(odd) {
@@ -149,18 +143,16 @@ button[type="reset"]:hover {
 }
 
 .course:nth-child(even) {
-    background-color: rgba(32, 137, 249, 0.056); /* Light gray for even rows */
+    background-color: rgba(32, 137, 249, 0.056);
   }
 
-  /* General Responsive Adjustments */
 @media (max-width: 768px) {
-    /* Body adjustments for smaller screens */
     body {
         font-size: 0.9rem;
     }
 
     button:hover {
-        transform: none; /* Disable hover transform on smaller screens */
+        transform: none; 
     }
 
     .container {
@@ -178,19 +170,19 @@ button[type="reset"]:hover {
     }
 
     #courseContainer {
-        max-height: 250px; /* Adjust height for smaller screens */
-        display: flex; /* Switch to flex for better stacking */
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px; /* Maintain spacing */
+        max-height: 250px; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px; 
         overflow-y: auto;
         width: 350px;
         padding-bottom: 10px;
     }
 
     .course {
-        display: flex; /* Switch to flex for better stacking */
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px; /* Space between inputs */
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px; 
         background-color: white;
         padding: 10px;
         border-radius: 5px;
