@@ -1,4 +1,3 @@
-// script.js
 document.getElementById('addCourse').addEventListener('click', function () {
     const courseContainer = document.getElementById('courseContainer');
     const courseDiv = document.createElement('div');
